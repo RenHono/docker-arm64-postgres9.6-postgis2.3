@@ -1,0 +1,16 @@
+version: '1'
+services:
+        postgres:
+                image: renhono/postgres96:v1.23.2
+                environment:
+                        POSTGRES_PASSWORD: post@6630 
+                        POSTGRES_USER: postgres
+                        POSTGRES_DB: postgres
+                        PG_DATA: '/var/lib/postgresql/data'
+                        #PG_VERSION: 9.6.24-0+deb9u1
+                ports:
+                        - '5433:5432'
+                volumes:
+                        - ./pdata:/var/lib/postgresql/data
+
+
